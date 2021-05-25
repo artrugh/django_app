@@ -1,7 +1,7 @@
 ## CLI
 
 ### run server
-- python3 ./manage.py runserver 4000
+- python3 ./manage.py runserver optional_number_port
 ### create an app
 - django admin startapp name_of_the_app
 ### migrate apps
