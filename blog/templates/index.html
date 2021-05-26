@@ -1,16 +1,10 @@
-{% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
-{% load bootstrap3 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-<h2>I am the home Page</h2>
-
-{% for post in posts %}
-  <div>
-    <h3><a href="/post/{{post.slug}}">{{ post.title}}</a></h3>
-    <p>{{ post.summary }}</p>
-  </div>
-{% endfor %}
+{% extends 'base.html' %}
+{% block content%}
+  <h2>I am the home Page</h2>
+  {% for post in posts %}
+    <div>
+      <h3><a href="/post/{{post.slug}}">{{ post.title}}</a></h3>
+      <p>{{ post.summary }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
