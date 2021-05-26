@@ -21,7 +21,8 @@ from django.conf.urls import url
 urlpatterns = [
 
     url('^$', blog_views.index),
-    url('^post/$', blog_views.post),
+    url('^post/(.*)$', blog_views.post),
+    url('^about/$', blog_views.about),
     url('admin/', admin.site.urls),
 
 ]
