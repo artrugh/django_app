@@ -11,6 +11,12 @@
 ### create admin by cli
 - python3 ./manage.py createsuperuser
 
+## after set media directory
+
+- python3 ./manage.py makemigrations blog
+- python3 ./manage.py migrate --fake blog
+- python3 ./manage.py migrate blog
+
 ### login admin
 http://localhost:4000/admin/login/?next=/admin/
 
