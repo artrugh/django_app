@@ -13,3 +13,6 @@
 
 ### login admin
 http://localhost:4000/admin/login/?next=/admin/
+
+## packages
+pip3 install django-bootstrap3
