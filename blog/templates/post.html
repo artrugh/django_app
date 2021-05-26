@@ -1,9 +1,11 @@
-{% extends 'base.html' %}
-{% block title %}
-My Site: {{post.title}}
-{% endblock %}
-{% block content%}
-  <a href="/"> Back to index</a> <br/>
-  <h2>{{post.title}}</h2>
-  <div>{{post.content}}</div>
-{% endblock %}
+{% extends 'single-template.html' %}
+{% block title %}MySite: {{ post.title }}{% endblock %}
+    {% block entry %}
+        <div  style="background-image:url({{ post.image.url }}); background-size: cover; background-position: center; height:240px; text-align: center; display: flex; align-items: center; justify-content: center; color: #fff; margin-bottom: 30px;">
+          <h2>{{ post.title }}</h2>
+        </div>
+        <div>
+            {{ post.content|linebreaks }}
+        </div>
+
+    {% endblock %}
